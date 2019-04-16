@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
        randomadd();
 
     }
-    int i=0;
+    int aa=0;
 
     public void clcikBtn(View view) {
-        i++;
+        aa++;
         String s=tvCent.getText().toString();
         ctn=Integer.parseInt(s);
         ctn--;
@@ -107,14 +107,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        tvResults[i].setText(st+"스트라이크 ,"+ ball+"볼 입니다.");
+        tvResults[aa].setText(st+"스트라이크 ,"+ ball+"볼 입니다.");
 
 
 
             st=0;
             ball=0;
 
-            if (i==9){
+            if (aa==9){
                 Toast.makeText(this, "횟수가 초가 했습니다.", Toast.LENGTH_SHORT).show();
                 btnRe.setVisibility(View.VISIBLE);
             }
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clcikBtn2(View view) {
-        i=0;
+        aa=0;
         ctn=10;
         randomadd();
         for (int k=0; k<tvResults.length;k++){
