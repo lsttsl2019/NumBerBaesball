@@ -16,22 +16,28 @@ public class MainActivity extends AppCompatActivity {
     EditText et2;
     EditText et3;
 
-    Button btn;
+
 
     Random rnd=new Random();
     int rn1;
     int rn2;
     int rn3;
 
-    TextView tv;
-    int[] rnds;
-    int[] nums;
+    TextView tvCent;
+    TextView[] tvResults= new TextView[10];
+
+    int[] rnds=new int[3];
+    int[] nums=new int[3];
+
+    int st=0;
+    int ball=0;
+
+
     int num1;
     int num2;
     int num3;
 
-    int st;
-    int ball;
+
     int ctn;
 
     @Override
@@ -39,15 +45,81 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//    while(true){
-//        rn1=rnd.nextInt(10);
-//        rn2=rnd.nextInt(10);
-//        rn3=rnd.nextInt(10);
-//        if(rn1!=rn2 && rn1!=rn3 && rn2!=rn3){
-//            break;
-//        }
-//
-//    }
+        et1=findViewById(R.id.num01);
+        et2=findViewById(R.id.num02);
+        et3=findViewById(R.id.num03);
+        tvCent=findViewById(R.id.tv_cent);
+
+
+        for (int i=0; i<10; i++){
+            tvResults[i]=findViewById(R.id.tv_01+i);
+        }
+
+
+        while(true){
+            rn1=rnd.nextInt(10);
+            rn2=rnd.nextInt(10);
+            rn3=rnd.nextInt(10);
+            if(rn1!=rn2 && rn1!=rn3 && rn2!=rn3){
+                rnds[0]=rn1;
+                rnds[1]=rn2;
+                rnds[2]=rn3;
+
+                break;
+            }
+
+        }
+
+
+
+
+
+
+
+    }
+
+    public void clcikBtn(View view) {
+        String s=tvCent.getText().toString();
+        ctn=Integer.parseInt(s);
+        ctn--;
+        tvCent.setText(ctn+"");
+
+        String nb1=et1.getText().toString();
+        String nb2=et2.getText().toString();
+        String nb3=et3.getText().toString();
+
+        nums[0]=Integer.parseInt(nb1);
+        nums[0]=Integer.parseInt(nb2);
+        nums[0]=Integer.parseInt(nb3);
+
+        et1.setText("");
+        et2.setText("");
+        et3.setText("");
+
+
+        for(int i=0; i<3; i++)
+            for (int j = 0; j < 3; j++) {
+                if (rnds[i] == nums[j] && i == j) {
+                    st++;
+                }
+                if (rnds[i] == nums[j] && i != j) {
+                    ball++;
+                }
+            }
+
+
+
+
+
+            st=0;
+            ball=0;
+
+    }
+}
+
+
+
+
 //    //랜덤한 컴퓨터 숫자 완료.
 
 
@@ -73,15 +145,6 @@ public class MainActivity extends AppCompatActivity {
 //        nums[2]=num3;
 //
 //
-//        for(int i=0; i<3; i++)
-//            for (int j = 0; j < 3; j++) {
-//                if (rnds[i] == nums[j] && i == j) {
-//                    st++;
-//                }
-//                if (rnds[i] == nums[j] && i != j) {
-//                    ball++;
-//                }
-//            }
 //
 //
 //        if(st==3){
@@ -96,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //버튼에 리스너 붙여주기
+//버튼에 리스너 붙여주기
 //
 //     btn.setOnClickListener(new View.OnClickListener() {
 //         @Override
@@ -124,17 +187,6 @@ public class MainActivity extends AppCompatActivity {
 //     });
 
 
-
-
-
-
-
-
-    }
-
-    public void clcikBtn(View view) {
-    }
-}
 
 
 
