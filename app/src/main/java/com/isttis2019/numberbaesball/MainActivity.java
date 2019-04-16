@@ -7,6 +7,7 @@ package com.isttis2019.numberbaesball;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.TextView;
+        import android.widget.Toast;
 
         import java.util.Random;
 
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     EditText et2;
     EditText et3;
 
+
+    Button btnRe;
 
 
     Random rnd=new Random();
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     int ctn;
 
+    TextView tvSt;
+    TextView tvBall;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,35 +56,23 @@ public class MainActivity extends AppCompatActivity {
         et3=findViewById(R.id.num03);
         tvCent=findViewById(R.id.tv_cent);
 
+        tvSt=findViewById(R.id.num_st);
+        tvBall=findViewById(R.id.num_ball);
+        btnRe=findViewById(R.id.btn_rest);
 
-        for (int i=0; i<10; i++){
-            tvResults[i]=findViewById(R.id.tv_01+i);
+
+        for (int k=0; k<10; k++){
+            tvResults[k]=findViewById(R.id.tv_01+k);
         }
 
 
-        while(true){
-            rn1=rnd.nextInt(10);
-            rn2=rnd.nextInt(10);
-            rn3=rnd.nextInt(10);
-            if(rn1!=rn2 && rn1!=rn3 && rn2!=rn3){
-                rnds[0]=rn1;
-                rnds[1]=rn2;
-                rnds[2]=rn3;
-
-                break;
-            }
-
-        }
-
-
-
-
-
-
+       randomadd();
 
     }
+    int i=0;
 
     public void clcikBtn(View view) {
+        i++;
         String s=tvCent.getText().toString();
         ctn=Integer.parseInt(s);
         ctn--;
@@ -108,11 +102,54 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+        tvSt.setText(st+"");
+        tvBall.setText(ball+"");
+
+
+
+        tvResults[i].setText(st+"스트라이크 ,"+ ball+"볼 입니다.");
 
 
 
             st=0;
             ball=0;
+
+            if (i==9){
+                Toast.makeText(this, "횟수가 초가 했습니다.", Toast.LENGTH_SHORT).show();
+                btnRe.setVisibility(View.VISIBLE);
+            }
+
+            if (st==3){
+                Toast.makeText(this, "이겼습니다 고생하셨습니다", Toast.LENGTH_LONG).show();
+                btnRe.setVisibility(View.VISIBLE);
+            }
+
+    }
+
+    public void clcikBtn2(View view) {
+        i=0;
+        ctn=10;
+        randomadd();
+        for (int k=0; k<tvResults.length;k++){
+            tvResults[k].setText("");
+        }
+        btnRe.setVisibility(View.INVISIBLE);
+    }
+
+    void randomadd(){
+        while(true){
+            rn1=rnd.nextInt(10);
+            rn2=rnd.nextInt(10);
+            rn3=rnd.nextInt(10);
+            if(rn1!=rn2 && rn1!=rn3 && rn2!=rn3){
+                rnds[0]=rn1;
+                rnds[1]=rn2;
+                rnds[2]=rn3;
+
+                break;
+            }
+
+        }
 
     }
 }
