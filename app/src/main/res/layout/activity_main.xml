@@ -5,70 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg2_img"
+    android:weightSum="5">
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        >
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="숫자 야구 게임"
+            android:textStyle="bold"
             android:textSize="30sp"
-            android:textColor="#0000ff"
-            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="16sp"
+            android:textColor="#2141F7"
             />
+
+
     </LinearLayout>
 
-    <LinearLayout
-        
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/num1"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:maxLines="1"
-            />
-
-        <EditText
-            android:id="@+id/num2"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:maxLines="1"
-            />
-
-        <EditText
-            android:id="@+id/num3"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:maxLines="1"
-            />
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/num01"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:text="확인"
-            android:textColor="#FF0000"
-            android:background="#FFFF00"
-            />
+            android:textSize="50sp"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:id="@+id/num02"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:id="@+id/num03"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:layout_margin="20dp"/>
+
+        <Button
+            android:onClick="clcikBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제출"/>
+
     </LinearLayout>
-    <TextView
-        android:id="@+id/tv"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#00ffaf"
-        android:textSize="30sp"
-        android:gravity="left"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
 
 
 
