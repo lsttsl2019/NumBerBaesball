@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvCent;
     TextView[] tvResults= new TextView[10];
+    TextView[] tvSballs=new TextView[10];
 
     int[] rnds=new int[3];
     int[] nums=new int[3];
@@ -62,8 +63,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         for (int k=0; k<10; k++){
+
             tvResults[k]=findViewById(R.id.tv_01+k);
+            tvSballs[k]=findViewById(R.id.tv_sball_01+k);
+
         }
+
+
 
 
        randomadd();
@@ -72,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     int aa=0;
 
     public void clcikBtn(View view) {
-        aa++;
+
         String s=tvCent.getText().toString();
         ctn=Integer.parseInt(s);
         ctn--;
@@ -83,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
         String nb3=et3.getText().toString();
 
         nums[0]=Integer.parseInt(nb1);
-        nums[0]=Integer.parseInt(nb2);
-        nums[0]=Integer.parseInt(nb3);
+        nums[1]=Integer.parseInt(nb2);
+        nums[2]=Integer.parseInt(nb3);
 
         et1.setText("");
         et2.setText("");
@@ -105,16 +111,13 @@ public class MainActivity extends AppCompatActivity {
         tvSt.setText(st+"");
         tvBall.setText(ball+"");
 
-
-
         tvResults[aa].setText(st+"스트라이크 ,"+ ball+"볼 입니다.");
+        tvSballs[aa].setText(nb1+" , "+nb2+" , "+nb3);
+
+        aa++;
 
 
-
-            st=0;
-            ball=0;
-
-            if (aa==9){
+            if (aa==10){
                 Toast.makeText(this, "횟수가 초가 했습니다.", Toast.LENGTH_SHORT).show();
                 btnRe.setVisibility(View.VISIBLE);
             }
@@ -124,14 +127,25 @@ public class MainActivity extends AppCompatActivity {
                 btnRe.setVisibility(View.VISIBLE);
             }
 
+        st=0;
+        ball=0;
+
+
+
     }
 
     public void clcikBtn2(View view) {
         aa=0;
         ctn=10;
+        tvCent.setText(ctn+"");
+        st=0;
+        tvSt.setText(st+"");
+        ball=0;
+        tvBall.setText(ball+"");
         randomadd();
         for (int k=0; k<tvResults.length;k++){
             tvResults[k].setText("");
+            tvSballs[k].setText("");
         }
         btnRe.setVisibility(View.INVISIBLE);
     }

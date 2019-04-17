@@ -44,9 +44,11 @@
             android:layout_height="wrap_content"
             android:textSize="50sp"
             android:layout_margin="20dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:maxLines="1"/>
 
         <EditText
+            android:maxLines="1"
             android:id="@+id/num02"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -55,6 +57,7 @@
             android:inputType="number"/>
 
         <EditText
+            android:maxLines="1"
             android:id="@+id/num03"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -161,163 +164,371 @@
        android:weightSum="5"
        android:orientation="vertical">
 
+
+
+
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
            android:orientation="horizontal"
            android:weightSum="2">
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_01"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
 
-           <TextView
-               android:id="@+id/tv_01"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#F1EBEB"
+                android:layout_marginLeft="10sp"
+                />
+               <TextView
+                   android:id="@+id/tv_sball_01"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+           <LinearLayout
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
-           <TextView
-               android:id="@+id/tv_02"
-               android:layout_width="0dp"
-               android:layout_weight="1"
-               android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_02"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_02"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+
 
        </LinearLayout>
+       <!--아이템 1-->
+
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
            android:orientation="horizontal"
            android:weightSum="2">
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_03"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
 
-           <TextView
-               android:id="@+id/tv_03"
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_03"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+           <LinearLayout
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
-           <TextView
-               android:id="@+id/tv_04"
-               android:layout_width="0dp"
-               android:layout_weight="1"
-               android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_04"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_04"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+
 
        </LinearLayout>
+
+       <!--아이템2-->
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
            android:orientation="horizontal"
            android:weightSum="2">
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_05"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
 
-           <TextView
-               android:id="@+id/tv_05"
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_05"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+           <LinearLayout
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
-           <TextView
-               android:id="@+id/tv_06"
-               android:layout_width="0dp"
-               android:layout_weight="1"
-               android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_06"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_06"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+
 
        </LinearLayout>
+       <!--아이템 3-->
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
            android:orientation="horizontal"
            android:weightSum="2">
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_07"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
 
-           <TextView
-               android:id="@+id/tv_07"
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_07"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+           <LinearLayout
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
-           <TextView
-               android:id="@+id/tv_08"
-               android:layout_width="0dp"
-               android:layout_weight="1"
-               android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_08"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_08"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+
 
        </LinearLayout>
+       <!--아이템4-->
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
            android:orientation="horizontal"
            android:weightSum="2">
-
-           <TextView
-               android:id="@+id/tv_09"
+           <LinearLayout
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
-               android:layout_marginLeft="10sp"
-               />
-           <TextView
-               android:id="@+id/tv_10"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_09"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_09"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+           <LinearLayout
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="wrap_content"
-               android:text="0"
-               android:textStyle="bold"
-               android:textSize="20sp"
-               android:textColor="#F1EBEB"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_10"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
 
-               android:layout_marginLeft="10sp"
-               />
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+               <TextView
+                   android:id="@+id/tv_sball_10"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   android:textColor="#F1EBEB"
+                   android:layout_marginLeft="10sp"
+                   />
+
+
+           </LinearLayout>
+
+
 
        </LinearLayout>
-
+       <!--아이템 마지막-->
 
 
 
